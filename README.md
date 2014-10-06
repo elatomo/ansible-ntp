@@ -1,7 +1,7 @@
 ansible-ntp
 ===========
 
-Set up *ntp service* + *time zone*.
+Set up *ntp service* + *time zone* on RHEL/CentOS and Debian/Ubuntu.
 
 Requirements
 ------------
@@ -11,7 +11,7 @@ None.
 Role Variables
 --------------
 
-    time_zone: Anctartica/South_Pole  # time zone, must exist under `/usr/share/zoneinfo/`.
+    time_zone: Anctartica/South_Pole  # time zone, must exist under `/usr/share/zoneinfo/`
 
 
 Dependencies
@@ -24,8 +24,10 @@ Example Playbook
 
     - hosts: all
       sudo: true
+      vars:
+        time_zone: Europe/Berlin
       roles:
-         - ntp
+        - ntp
 
 License
 -------
