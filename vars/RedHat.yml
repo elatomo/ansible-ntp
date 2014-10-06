@@ -1,0 +1,4 @@
+---
+# RedHat specific vars
+
+ntp_service: ntpd

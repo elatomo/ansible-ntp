@@ -1,0 +1,6 @@
+---
+# Debian specific tasks
+
+ - name: debian | ensure packages
+   apt: name=ntp state=present
+

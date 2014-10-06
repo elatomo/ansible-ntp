@@ -1,0 +1,4 @@
+---
+# defaults file for ntp
+
+time_zone: Antarctica/South_Pole

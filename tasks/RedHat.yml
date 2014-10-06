@@ -1,0 +1,6 @@
+---
+# RedHat specific tasks
+
+ - name: redhat | ensure packages
+   yum: name=ntp state=present
+

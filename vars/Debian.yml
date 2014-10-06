@@ -1,0 +1,4 @@
+---
+# Debian specific vars
+
+ntp_service: ntp
