@@ -13,6 +13,12 @@ Role Variables
 
     time_zone: Anctartica/South_Pole  # time zone, must exist under `/usr/share/zoneinfo/`
 
+    ntp_servers:
+      - 0.pool.ntp.org
+      - 1.pool.ntp.org
+      - 2.pool.ntp.org
+      - 3.pool.ntp.org
+
 
 Dependencies
 ------------
