@@ -1,0 +1,13 @@
+---
+# test ntp provision
+
+ - name: test ntp provision
+   hosts: localhost
+   remote_user: root
+
+   vars:
+     time_zone: Europe/Berlin
+
+   roles:
+     - ansible-ntp
+
