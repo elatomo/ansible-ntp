@@ -35,6 +35,6 @@ script:
 
   # Check that time is synchronized.
   - >
-    ntpq -p | grep -q '^*'
+    ntpq -p | tee /dev/tty | grep -q '^*'
     && (echo 'time synchronized' && exit 0)
     || (echo 'time unsynchronized' && exit 1)
