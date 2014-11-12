@@ -1,6 +1,15 @@
 ---
 # RedHat specific tasks
 
+ - name: redhat | test if selinux is enabled
+   shell: selinuxenabled
+   register: selinux_enabled
+   ignore_errors: true
+
+ - name: redhat | ensure libselinux-python if needed
+   yum: name=libselinux-python state=present
+   when: selinux_enabled.rc == 0
+
  - name: redhat | ensure packages
    yum: name=ntp state=present
 
